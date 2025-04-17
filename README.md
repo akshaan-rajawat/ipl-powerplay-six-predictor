@@ -16,14 +16,19 @@ We wanted to build a model that predicts whether such a "promo hit" (a six in th
 ## 📂 Project Structure
 
 ```
-.
-├── ipl_dataset_final_enhanced_v2.csv   # Final cleaned and enhanced dataset
-├── IPL.ipynb                           # Main notebook with data prep, model training & prediction
-├── model.joblib                        # Trained Random Forest model
-├── preprocessor.joblib                 # Fitted preprocessing pipeline
-├── ipl_yamls/                          # Contains YAML files scraped from IPL match pages
-├── web_scrapping.ipynb                 # Script to extract data from YAML files
-├── matplotlib.ipynb                    # (Optional) Notebook for EDA & plots
+├── app.py # Flask web app
+├── ipl_dataset_final_enhanced_v2.csv # Final cleaned and enhanced dataset
+├── ipl_promo_model_v3.pkl # Trained Random Forest model
+├── ipl_preprocessor.pkl # Fitted preprocessing pipeline
+├── static/ # CSS and JS for Flask UI
+│ ├── styles.css
+│ └── main.js
+├── templates/ # HTML templates for Flask UI
+│ ├── index.html
+│ └── analysis.html
+├── requirements.txt # All dependencies
+├── ipl_yamls/ # Contains YAML files scraped from IPL match pages
+
 ```
 
 ## 🧠 ML Pipeline
@@ -39,6 +44,10 @@ We wanted to build a model that predicts whether such a "promo hit" (a six in th
 - **Evaluation**:
   - Accuracy, F1-score, and ROC-AUC on test data
 
+## 🚀 How to Run the Flask Web App
+
+1. Clone the repo:
+
 ## 🚀 How to Run
 
 1. Clone the repo:
@@ -51,10 +60,11 @@ We wanted to build a model that predicts whether such a "promo hit" (a six in th
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Open `IPL.ipynb` and run the cells to:
-   - Train the model
-   - Make predictions for upcoming matches
+ 
+3. Run the Flask app:
+   ```bash
+   python app.py
+   ```
 
 ## 📈 Prediction Output
 
