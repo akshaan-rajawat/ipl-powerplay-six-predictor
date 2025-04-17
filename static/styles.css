@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body.dark-mode {
+    background: #18181b;
+    color: #fafafa;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.container {
+    background: #23232b;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px #0005;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #60a5fa;
+    margin-bottom: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.team-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.versus {
+    font-size: 24px;
+    color: #60a5fa;
+    font-weight: bold;
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+.custom-select select {
+    width: 100%;
+    padding: 10px 40px 10px 12px; /* right padding for arrow */
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background: #18181b;
+    color: #fafafa;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border 0.2s;
+}
+.custom-select select:focus {
+    outline: 2px solid #60a5fa;
+    border-color: #60a5fa;
+}
+.custom-select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px; /* right margin for arrow */
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid #60a5fa;
+    transform: translateY(-50%);
+}
+button, .analyze-btn {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #60a5fa;
+    color: #18181b;
+    margin-top: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: background 0.2s, transform 0.2s;
+}
+button:hover, .analyze-btn:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: scale(1.04);
+}
+.result-box {
+    background: #1a1a2e;
+    border: 1.5px solid #60a5fa;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    min-height: 32px;
+    transition: background 0.2s, border 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.analysis-section {
+    margin-top: 36px;
+    border-top: 1px solid #374151;
+    padding-top: 24px;
+}
+.analysis-box ul {
+    padding-left: 1.2em;
+}
+.analysis-box li {
+    margin-bottom: 4px;
+}

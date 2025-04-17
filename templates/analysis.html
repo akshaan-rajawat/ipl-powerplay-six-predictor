@@ -1,0 +1,14 @@
+<div>
+    <strong>🏆 Top 5 Matchups:</strong>
+    <ul>
+        {% for line in best %}
+        <li>{{ line }}</li>
+        {% endfor %}
+    </ul>
+    <strong>⚡️ Bottom 5 Matchups:</strong>
+    <ul>
+        {% for line in worst %}
+        <li>{{ line }}</li>
+        {% endfor %}
+    </ul>
+</div>

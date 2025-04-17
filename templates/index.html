@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Promo Hit Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        const teamVenues = {{ team_venues|tojson|safe }};
+    </script>
+    
+    
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>IPL Promo Hit Predictor <span style="font-size:0.8em;">🏏</span></h1>
+        <form id="predictionForm" autocomplete="off">
+            <div class="team-row">
+                <div>
+                    <label for="team1">Home Team</label>
+                    <div class="custom-select">
+                        <select name="team1" id="team1">
+                            {% for team in teams %}
+                            <option value="{{ team }}">{{ team }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="versus">VS</div>
+                <div>
+                    <label for="team2">Away Team</label>
+                    <div class="custom-select">
+                        <select name="team2" id="team2">
+                            {% for team in teams %}
+                            <option value="{{ team }}">{{ team }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="venue">Venue</label>
+                <div class="custom-select">
+                    <select name="venue" id="venue"></select>
+                </div>
+            </div>
+            <button type="submit" class="predict-btn">Predict</button>
+        </form>
+        <div id="result" class="result-box"></div>
+        <div class="analysis-section">
+            <button id="analyzeBtn" class="analyze-btn" type="button">Analyze All Matchups</button>
+            <div id="analysis" class="result-box analysis-box"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
